@@ -1,0 +1,16 @@
+Export a Wordpress blog to a Kindle-compatible ZIP file that can be published to the Kindle store.
+
+Step 1: Get an export XML file via the export feature of Wordpress
+Step 2: Create a file called introduction.txt, and fill it with the content for your first chapter. It'll be called "Introduction"
+Step 3: Run the parser:
+
+    ruby parser.rb "Sean Schulte" wordpress.8-01-2010.xml
+
+Step 4: Load the file in your browser (I've tested this with Chrome), and save it (File->Save) to the target/blog directory that was created during the parsing process
+Step 5: Run the zip processor:
+
+    sh process_zip.sh
+
+Step 6: Upload the ZIP file to Amazon to publish it.
+
+That's it. Six steps. (Writing all the content not included.)
